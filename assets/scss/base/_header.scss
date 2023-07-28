@@ -61,7 +61,12 @@
                 text-decoration: none;
                 font-size: var(--sii-sub-subtitle);
             }
+            &.active{
+                font-size: var(--sii-sub-subtitle);
+                color: var(--sii-negro);
+            }
         }
+        margin: 0;
 
     }
 

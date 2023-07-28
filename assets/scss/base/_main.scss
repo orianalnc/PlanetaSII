@@ -107,7 +107,6 @@
           text-align: center;
           line-height: 30px;
         }
-       
       }
       display: flex;
       flex-direction: column;
@@ -156,7 +155,6 @@
           text-align: center;
           line-height: 30px;
         }
-     
       }
       display: flex;
       flex-direction: column;
@@ -204,7 +202,6 @@
           text-align: center;
           line-height: 30px;
         }
-     
       }
       display: flex;
       flex-direction: column;
@@ -317,7 +314,6 @@
   }
 }
 
-
 .fichas_docentes {
   &__title {
     h3 {
@@ -390,28 +386,27 @@
   }
   padding: 60px 0;
   background-color: var(--sii-gris3);
-  &__filter{
+  &__filter {
     padding: 16px 24px;
     background-color: var(--sii-blanco);
     margin: 20px 0;
-    label.col-form-label, .form-select{
+    label.col-form-label,
+    .form-select {
       font-size: 16px;
       color: var(--sii-negro);
     }
-    
   }
-  &__pagination{
+  &__pagination {
     display: flex;
     justify-content: flex-end;
     margin: 30px 0;
-
   }
 }
 
 // Modulos de LINK
 
 .complementarios {
-  &__items{
+  &__items {
     padding-bottom: 40px;
     &__img {
       position: relative;
@@ -420,7 +415,7 @@
         background-image: url('data:image/svg+xml,<svg width="693" height="369" viewBox="0 0 693 369" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M678.512 368.28C685.997 368.28 692.065 362.169 692.065 354.632C692.065 347.095 685.997 340.985 678.512 340.985C671.027 340.985 664.959 347.095 664.959 354.632C664.959 362.169 671.027 368.28 678.512 368.28Z" fill="%23ED4883"/><path d="M9.59978 364.299C14.9016 364.299 19.1996 359.971 19.1996 354.632C19.1996 349.293 14.9016 344.965 9.59978 344.965C4.29797 344.965 0 349.293 0 354.632C0 359.971 4.29797 364.299 9.59978 364.299Z" fill="%23ED4883"/><path d="M142.845 27.7116C141.083 27.7116 139.321 27.0293 138 25.6532L124.978 12.222C122.358 9.52661 122.414 5.20497 125.091 2.57786C127.768 -0.0606136 132.059 -0.00375158 134.668 2.69159L147.69 16.1228C150.31 18.8181 150.254 23.1398 147.577 25.7669C146.256 27.0634 144.55 27.7116 142.845 27.7116Z" fill="%23FFE984"/><path d="M61.958 135.321C56.8758 135.321 51.466 133.478 47.3099 128.463C45.5142 126.302 42.318 125.688 37.8343 126.655C33.9493 127.485 30.674 129.236 30.6402 129.248L27.7602 123.152C27.9183 123.072 31.7357 121.025 36.4339 119.99C45.0963 118.08 49.7381 121.082 52.0985 123.937C57.7567 130.749 66.8257 128.611 70.4284 125.95L74.065 131.556C71.1512 133.706 66.7014 135.309 61.958 135.309V135.321Z" fill="%23882FB1"/></svg>');
         display: inline-block;
         background-repeat: no-repeat;
-        background-size: 100% 400px;;
+        background-size: 100% 400px;
         // background-image: url("../../img/Group\ 16.png");
         position: absolute;
         bottom: -270px;
@@ -428,7 +423,6 @@
         width: 100%;
         height: 100%;
         margin: auto;
-  
       }
     }
     &__content {
@@ -438,13 +432,13 @@
         h3 {
           display: flex;
           align-items: center;
-  
+
           font-size: var(--sii-h3);
           font-weight: 700;
           line-height: 45px;
           letter-spacing: 0px;
           text-align: left;
-  
+
           small {
             margin-right: 24px;
             width: 64px;
@@ -473,10 +467,117 @@
     }
     &:nth-child(2n) {
       flex-direction: row-reverse;
+    }
   }
-  }
- 
 
   padding: 40px 0 60px;
   background-color: var(--sii-gris3);
+}
+
+// PAGE DETAIL Ficha
+
+.ficha_docente_detail {
+  padding: 40px 0;
+  // background-color: var(--sii-gris3);
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  &__info {
+    font-size: var(--sii-sub-subtitle);
+    color: var(--sii-negro);
+    margin: 40px 0;
+    &__item {
+      padding: 8px;
+      background-color: #f2f2f2;
+      &:nth-child(2n) {
+        background-color: var(--sii-blanco);
+      }
+    }
+  }
+  &__content {
+  }
+  &__fichas {
+    background-color: #f2f2f2;
+    padding: 23px 32px;
+    margin: 40px 0;
+    &__recursos {
+      margin-top: 16px;
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          list-style: none;
+          padding-bottom: 16px;
+          small {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            min-width: 180px;
+            display: inline-block;
+          }
+        }
+      }
+      &__icon img {
+        min-height: 20px;
+        margin-right: 12px;
+      }
+      &__download {
+        margin: 0 16px;
+      }
+    }
+  }
+  &__relacionado {
+    &__title{
+      margin-bottom: 24px;
+    }
+    padding: 40px 0;
+    .card {
+      background-color: var(--sii-gris3);
+      padding: 16px;
+    }
+    &__content {
+      &__img {
+      }
+      &__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        padding: 16px 0;
+        h5{
+          margin: 0;
+        }
+      }
+      &__desc {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      &__video{
+        position: relative;
+        &::after{
+          content: "";
+          width: 53px;
+          height: 53px;
+          background-image: url('data:image/svg+xml,<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.9999 0.333313C12.2719 0.333313 0.333252 12.272 0.333252 27C0.333252 41.728 12.2719 53.6666 26.9999 53.6666C41.7279 53.6666 53.6666 41.728 53.6666 27C53.6666 12.272 41.7279 0.333313 26.9999 0.333313ZM21.6666 36.3333V17.6666C21.6666 16.568 22.9199 15.9413 23.7999 16.6L36.2453 25.9333C36.9572 26.4666 36.9572 27.5333 36.2453 28.0666L23.7999 37.4C22.9199 38.0586 21.6666 37.432 21.6666 36.3333Z" fill="%23463F3A"/></svg>');
+          display: inline-block;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .fichas_docentes {
+    background-color: var(--sii-blanco);
+    padding: 30px 0;
+    &__contenidos {
+      margin: 0;
+    }
+  }
 }
