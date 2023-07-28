@@ -61,7 +61,8 @@
                                             alt=""> </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="ficha-docente.html">Fichas Docentes</a>
+                                    <a class="nav-link active" aria-current="page" href="ficha-docente.html">Fichas
+                                        Docentes</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="videos.html">Videos</a>
@@ -106,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="fichas_docentes__filter">
+            <div class="filter">
                 <div>
                     <form class="row ">
                         <div class="col-3 ">
@@ -126,8 +127,7 @@
                             <div class="row">
                                 <label class="col-lg-4 col-form-label text-end">Asignatura:</label>
                                 <div class=" col-lg-8">
-                                    <select class="form-select" id="filterbyAsignatura"
-                                        onchange="searchFilterCurso()">
+                                    <select class="form-select" id="filterbyAsignatura" onchange="searchFilterCurso()">
                                         <option value="" selected>Seleccionar asignatura</option>
                                         <option value="respeto">Respeto</option>
                                         <option value="mate">Matemática</option>
@@ -161,7 +161,7 @@
 
             <div class="fichas_docentes__contenidos">
                 <div class="row">
-                    <div class=" col-12 col-lg-3 1basico mate OA15 fichas_docentes__contenidos_card" data-aos="fade-up">
+                    <div class=" col-12 col-lg-3 1basico mate OA10 fichas_docentes__contenidos_card" data-aos="fade-up">
                         <div class="card">
                             <div class="fichas_docentes__contenidos__nivel">
                                 <div class="fichas_docentes__contenidos__nivel__title" style="background: #5ac6ff4d;">
@@ -178,7 +178,8 @@
                         </div>
                     </div>
 
-                    <div class="col  col-12 col-lg-3 2basico respeto OA8 fichas_docentes__contenidos_card" data-aos="fade-up">
+                    <div class="col  col-12 col-lg-3 2basico respeto OA8 fichas_docentes__contenidos_card"
+                        data-aos="fade-up">
                         <div class="card">
                             <div class="fichas_docentes__contenidos__nivel">
                                 <div class="fichas_docentes__contenidos__nivel__title" style="background: #5ac6ff4d;">
@@ -208,24 +209,24 @@
                 <a class="btn" href="ficha-docente.html"> Ver todos</a>
             </div>
 
-            <div class="fichas_docentes__pagination ">
+            <div class="paginacion ">
                 <nav class="" aria-label="Page navigation example">
                     <ul class="pagination">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
                     </ul>
-                  </nav>
+                </nav>
             </div>
 
         </div>
@@ -313,7 +314,8 @@
     <script src="node_modules/aos/dist/aos.js"></script>
 
     <script>
-        var searchFilterCurso = () => {
+
+        function searchFilterCurso() {
             let selectedCurso = document.getElementById("filterbyCurso").value;
             let selectedAsignatura = document.getElementById("filterbyAsignatura").value;
             let selectedOA = document.getElementById("filterbyAo").value;
@@ -324,7 +326,7 @@
             //let textBox = input.value;
             for (let i = 0; i < cards.length; i++) {
                 let title = cards[i].querySelector(".card");
-                if ((cards[i].classList.contains(selectedCurso) || selectedCurso == "") && (cards[i].classList.contains(selectedAsignatura) || selectedAsignatura == "") && (cards[i].classList.contains(selectedOA) || selectedOA == "")  ) {
+                if ((cards[i].classList.contains(selectedCurso) || selectedCurso == "") && (cards[i].classList.contains(selectedAsignatura) || selectedAsignatura == "") && (cards[i].classList.contains(selectedOA) || selectedOA == "")) {
                     cards[i].classList.remove("d-none");
                 } else {
                     cards[i].classList.add("d-none");
@@ -332,6 +334,7 @@
             }
         }
     </script>
+
 
 </body>
 

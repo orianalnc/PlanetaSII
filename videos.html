@@ -65,7 +65,7 @@
                                         Docentes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="videos.html">Videos</a>
+                                    <a class="nav-link active" href="videos.html">Videos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Material Didáctico</a>
@@ -108,9 +108,47 @@
                 </div>
             </div>
 
+            <div class="filter">
+                <div>
+                    <form class="row ">
+                        <div class="col-3 ">
+                            <div class="row">
+                                <label class="col-lg-3 col-form-label text-end">Curso:</label>
+                                <div class=" col-lg-9">
+                                    <select class="form-select" id="filterbyCurso" onchange="searchFilterCurso()">
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="1basico">1° Básico</option>
+                                        <option value="2basico">2° Básico</option>
+                                        <option value="3basico">3° Básico</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-3 ">
+                            <div class="row">
+                                <label class="col-lg-2 col-form-label text-end">OA:</label>
+                                <div class=" col-lg-8">
+                                    <select class="form-select" id="filterbyAo" onchange="searchFilterCurso()">
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="OA15">OA 15</option>
+                                        <option value="OA10">OA 10</option>
+                                        <option value="OA8">OA 8</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 text-end">
+                            <button type="submit" class="btn btn-primary mb-3">Filtrar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
             <div class="ficha_docente_detail__relacionado">
                 <div class="row">
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 1basico OA8 videos__card">
                         <div class="ficha_docente_detail__relacionado__content">
 
                             <div class="card">
@@ -131,7 +169,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 1basico OA15 videos__card">
                         <div class="ficha_docente_detail__relacionado__content">
 
                             <div class="card">
@@ -152,29 +190,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-3">
-                        <div class="ficha_docente_detail__relacionado__content">
-
-                            <div class="card">
-                                <div class=" ficha_docente_detail__relacionado__content__video">
-                                    <img class="img-fluid video" src="assets/img/place.png" alt=""
-                                        data-bs-toggle="modal" data-bs-target="#exampleModalVideo">
-                                </div>
-                                <div class="ficha_docente_detail__relacionado__content__title">
-                                    <h5>Video 01</h5>
-                                </div>
-
-                                <div class="ficha_docente_detail__relacionado__content__desc">
-                                    <p>Reseña del contenido del video consectetuer adipiscing elit. Aenean commodo
-                                        ligula eget dolor.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 2basico videos__card">
                         <div class="ficha_docente_detail__relacionado__content">
 
                             <div class="card">
@@ -196,7 +212,29 @@
                     </div>
 
 
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 2basico videos__card">
+                        <div class="ficha_docente_detail__relacionado__content">
+
+                            <div class="card">
+                                <div class=" ficha_docente_detail__relacionado__content__video">
+                                    <img class="img-fluid video" src="assets/img/place.png" alt=""
+                                        data-bs-toggle="modal" data-bs-target="#exampleModalVideo">
+                                </div>
+                                <div class="ficha_docente_detail__relacionado__content__title">
+                                    <h5>Video 01</h5>
+                                </div>
+
+                                <div class="ficha_docente_detail__relacionado__content__desc">
+                                    <p>Reseña del contenido del video consectetuer adipiscing elit. Aenean commodo
+                                        ligula eget dolor.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-lg-3 3basico videos__card">
                         <div class="ficha_docente_detail__relacionado__content">
 
                             <div class="card">
@@ -335,16 +373,15 @@
     <script>
         var searchFilterCurso = () => {
             let selectedCurso = document.getElementById("filterbyCurso").value;
-            let selectedAsignatura = document.getElementById("filterbyAsignatura").value;
             let selectedOA = document.getElementById("filterbyAo").value;
-            console.log(selectedCurso, selectedAsignatura, selectedOA);
+            console.log(selectedCurso, selectedOA);
             const input = document.querySelector(".form-select");
-            const cards = document.getElementsByClassName("fichas_docentes__contenidos_card");
+            const cards = document.getElementsByClassName("videos__card");
             console.log(cards[1])
             //let textBox = input.value;
             for (let i = 0; i < cards.length; i++) {
                 let title = cards[i].querySelector(".card");
-                if ((cards[i].classList.contains(selectedCurso) || selectedCurso == "") && (cards[i].classList.contains(selectedAsignatura) || selectedAsignatura == "") && (cards[i].classList.contains(selectedOA) || selectedOA == "")) {
+                if ((cards[i].classList.contains(selectedCurso) || selectedCurso == "") && (cards[i].classList.contains(selectedOA) || selectedOA == "")) {
                     cards[i].classList.remove("d-none");
                 } else {
                     cards[i].classList.add("d-none");
