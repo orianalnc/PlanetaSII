@@ -570,6 +570,7 @@
           right: 0;
         }
       }
+     margin-bottom: 24px;
     }
   }
 
@@ -578,6 +579,29 @@
     padding: 30px 0;
     &__contenidos {
       margin: 0;
+    }
+  }
+}
+
+
+
+
+// PAGE Videos
+
+
+.videos_content{
+  padding: 60px 0;
+  background-color: var(--sii-blanco);
+  &__title {
+    h3 {
+      font-size: var(--sii-h3);
+      color: var(--sii-azul-oscuro);
+      font-weight: 700;
+    }
+    p {
+      font-size: var(--sii-parrafos);
+      color: var(--sii-gris-oscuro);
+      font-weight: 400;
     }
   }
 }
