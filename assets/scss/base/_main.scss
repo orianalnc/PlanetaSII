@@ -581,7 +581,7 @@
 
 
 .videos_content{
-  padding: 60px 0;
+  padding: 60px 0 40px;
   background-color: var(--sii-blanco);
   &__title {
     h3 {
@@ -595,4 +595,8 @@
       font-weight: 400;
     }
   }
+}
+
+.grupos{
+  margin-top: 30px;
 }
