@@ -1,8 +1,8 @@
 @media (max-width: 1440px) {
-    .welcome_planeta {
-        margin-bottom: 0;
-        margin-top: 40px;
-    }
+  .welcome_planeta {
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
 }
 @media (max-width: 1199.98px) {
 }
@@ -11,18 +11,38 @@
 }
 
 @media (max-width: 767.98px) {
+  .btn-filter {
+    width: 100%;
+  }
+  .filter {
+    &_item {
+      margin-bottom: 15px;
+    }
+  }
+  .footer {
+    &__menu {
+      padding-bottom: 23px;
+    }
+    .divider {
+      &::after {
+        content: "";
+        opacity: 0;
+      }
+    }
+  }
+  .info_sii p{
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 575.98px) {
   .welcome_planeta {
     &__content_title {
       &__title {
-        h3{
-            font-size: 28px;
+        h3 {
+          font-size: 28px;
         }
       }
     }
-
-
   }
 }

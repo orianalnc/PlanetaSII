@@ -108,13 +108,13 @@
                 </div>
             </div>
 
-            <div class="filter">
+            <div class="filter ">
                 <div>
                     <form class="row ">
-                        <div class="col-12 col-lg-3 ">
+                        <div class="col-12 col-lg-3 filter_item">
                             <div class="row">
-                                <label class="col-lg-3 col-form-label text-end">Tipo:</label>
-                                <div class=" col-lg-9">
+                                <label class="col-4 col-lg-3 col-form-label text-start text-lg-end">Tipo:</label>
+                                <div class="col-8 col-lg-9">
                                     <select class="form-select" id="filterbyCurso" onchange="searchFilterCurso()">
                                         <option value="" selected>Seleccionar</option>
                                         <option value="1basico">1° Básico</option>
@@ -125,10 +125,10 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-3 ">
+                        <div class="col-12 col-lg-3 filter_item">
                             <div class="row">
-                                <label class="col-lg-2 col-form-label text-end">OA:</label>
-                                <div class=" col-lg-8">
+                                <label class="col-4 col-lg-2 col-form-label text-start text-lg-end">OA:</label>
+                                <div class="col-8 col-lg-8">
                                     <select class="form-select" id="filterbyAo" onchange="searchFilterCurso()">
                                         <option value="" selected>Seleccionar</option>
                                         <option value="OA15">OA 15</option>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-12 offset-lg-3 col-lg-3  text-end">
-                            <button type="submit" class="btn btn-primary mb-3">Filtrar</button>
+                            <button type="submit" class="btn btn-primary mb-3 btn-filter">Filtrar</button>
                         </div>
                     </form>
                 </div>
@@ -148,7 +148,7 @@
 
             <div class="ficha_docente_detail__relacionado">
                 <div class="row">
-                    <div class="col-12 col-lg-3 1basico OA8 videos__card">
+                    <div class="col-12 col-lg-3 1basico OA8 videos__card " data-aos="fade-up">
                         <div class="ficha_docente_detail__relacionado__content">
 
                             <div class="card">
