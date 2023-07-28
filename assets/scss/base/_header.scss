@@ -50,3 +50,19 @@
    
 
 }
+
+
+.sii-breadcrumb{
+    padding: 16px 0 ;
+    ol.breadcrumb{
+        li.breadcrumb-item{
+            a{
+                color: var(--sii-azul);
+                text-decoration: none;
+                font-size: var(--sii-sub-subtitle);
+            }
+        }
+
+    }
+
+}

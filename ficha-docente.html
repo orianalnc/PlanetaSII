@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planeta SII</title>
+
+    <link rel="stylesheet" href="assets/scss/css/main.min.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <div class="collapse navbar-collapse">
+                    <div class="d-flex ms-auto">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">¿Qué es Planeta SII?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Glosario de términos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Preguntas frecuentes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="intro">
+            <div class="d-flex align-items-center container ">
+                <div class="me-auto intro__title">
+                    <h4><strong> Planeta SII </strong> | Docentes </h4>
+                </div>
+                <div class="ms-auto intro__logo">
+                    <img src="assets/img/logo.png" class="img-fluid" alt="logo">
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="sii__navigation">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <div class="d-flex me-auto">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#"> <img src="assets/img/home.svg"
+                                            alt=""> </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Fichas Docentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Videos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Material Didáctico</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Links Complementarios</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <div class="sii-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Docente</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ficha Docente</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="fichas_docentes">
+        <div class="container">
+            <div class="fichas_docentes__title text-center">
+                <h3 data-aos="fade-up">Fichas Docentes</h3>
+                <div class="row mt-4">
+                    <div class="col offset-lg-2 col-lg-8">
+                        <p data-aos="fade-up">
+                            Accede a recursos pedagógicos que te ayudarán a enseñar sobre los impuestos y su importancia
+                            para la sociedad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fichas_docentes__filter">
+                <div>
+                    <form class="row ">
+                        <div class="col-3 ">
+                            <div class="row">
+                                <label class="col-lg-3 col-form-label text-end">Curso:</label>
+                                <div class=" col-lg-9">
+                                    <select class="form-select" id="filterbyCurso" onchange="searchFilterCurso()">
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="1basico">1° Básico</option>
+                                        <option value="2basico">2° Básico</option>
+                                        <option value="3basico">3° Básico</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="row">
+                                <label class="col-lg-4 col-form-label text-end">Asignatura:</label>
+                                <div class=" col-lg-8">
+                                    <select class="form-select" id="filterbyAsignatura"
+                                        onchange="searchFilterCurso()">
+                                        <option value="" selected>Seleccionar asignatura</option>
+                                        <option value="respeto">Respeto</option>
+                                        <option value="mate">Matemática</option>
+                                        <option value="leng">Lenguaje</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-3 ">
+                            <div class="row">
+                                <label class="col-lg-2 col-form-label text-end">OA:</label>
+                                <div class=" col-lg-8">
+                                    <select class="form-select" id="filterbyAo" onchange="searchFilterCurso()">
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="OA15">OA 15</option>
+                                        <option value="OA10">OA 10</option>
+                                        <option value="OA8">OA 8</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 text-end">
+                            <button type="submit" class="btn btn-primary mb-3">Filtrar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="fichas_docentes__contenidos">
+                <div class="row">
+                    <div class=" col-12 col-lg-3 1basico mate OA15 fichas_docentes__contenidos_card" data-aos="fade-up">
+                        <div class="card">
+                            <div class="fichas_docentes__contenidos__nivel">
+                                <div class="fichas_docentes__contenidos__nivel__title" style="background: #5ac6ff4d;">
+                                    <h4><strong> 1°</strong> Básico</h4>
+                                </div>
+                                <div class="fichas_docentes__contenidos__nivel__content">
+                                    <ul>
+                                        <li><a href="">Matemática</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col  col-12 col-lg-3 2basico respeto OA8 fichas_docentes__contenidos_card" data-aos="fade-up">
+                        <div class="card">
+                            <div class="fichas_docentes__contenidos__nivel">
+                                <div class="fichas_docentes__contenidos__nivel__title" style="background: #5ac6ff4d;">
+                                    <h4><strong> 2°</strong> Básico</h4>
+                                </div>
+                                <div class="fichas_docentes__contenidos__nivel__content">
+                                    <ul>
+                                        <li><a href="">Respeto</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="fichas_docentes__link d-none" data-aos="fade-up">
+                <a class="btn" href="ficha-docente.html"> Ver todos</a>
+            </div>
+
+            <div class="fichas_docentes__pagination ">
+                <nav class="" aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="info_sii">
+                        <img class="img-fluid" src="assets/img/logo_blanco.svg" alt="">
+                        <p>Información sobre la plataforma. Facilisi morbi sit consectetur elit nibh faucibus morbi. Sed
+                            sit eget est lacus. </p>
+                    </div>
+
+                </div>
+
+                <div class=" offset-lg-1 col-lg-2 divider">
+                    <div class="footer__menu">
+                        <h5>Sobre Planeta SII</h5>
+                        <ul class="footer__menu__navigation">
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-2 divider">
+                    <div class="footer__menu">
+                        <h5>Sobre Planeta SII</h5>
+                        <ul class="footer__menu__navigation">
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 divider">
+
+                    <div class="footer__menu">
+                        <h5>Sobre Planeta SII</h5>
+                        <ul class="footer__menu__navigation">
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer__menu">
+                        <h5>Sobre Planeta SII</h5>
+                        <ul class="footer__menu__navigation">
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                            <li><a href=""> Qué es Planeta SII</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+
+    <script>
+        var searchFilterCurso = () => {
+            let selectedCurso = document.getElementById("filterbyCurso").value;
+            let selectedAsignatura = document.getElementById("filterbyAsignatura").value;
+            let selectedOA = document.getElementById("filterbyAo").value;
+            console.log(selectedCurso, selectedAsignatura, selectedOA);
+            const input = document.querySelector(".form-select");
+            const cards = document.getElementsByClassName("fichas_docentes__contenidos_card");
+            console.log(cards[1])
+            //let textBox = input.value;
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector(".card");
+                if ((cards[i].classList.contains(selectedCurso) || selectedCurso == "") && (cards[i].classList.contains(selectedAsignatura) || selectedAsignatura == "") && (cards[i].classList.contains(selectedOA) || selectedOA == "")  ) {
+                    cards[i].classList.remove("d-none");
+                } else {
+                    cards[i].classList.add("d-none");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

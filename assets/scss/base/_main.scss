@@ -390,6 +390,22 @@
   }
   padding: 60px 0;
   background-color: var(--sii-gris3);
+  &__filter{
+    padding: 16px 24px;
+    background-color: var(--sii-blanco);
+    margin: 20px 0;
+    label.col-form-label, .form-select{
+      font-size: 16px;
+      color: var(--sii-negro);
+    }
+    
+  }
+  &__pagination{
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+
+  }
 }
 
 // Modulos de LINK

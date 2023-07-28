@@ -30,3 +30,10 @@ const swiper = new Swiper(".welcome_planeta__slider", {
     clickable: true,
   },
 });
+
+
+//
+
+
+
+
