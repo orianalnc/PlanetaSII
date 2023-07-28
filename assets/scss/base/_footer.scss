@@ -1,0 +1,58 @@
+.footer {
+  background-color: var(--sii-azul);
+  padding: 64px 0;
+  .info_sii {
+    img {
+      min-height: 40px;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: var(--sii-sub-subtitle);
+      font-weight: 400;
+      line-height: 21px;
+      color: var(--sii-blanco);
+    }
+  }
+  &__menu {
+    h5 {
+      color: #fee882;
+      font-size: var(--sii-sub-subtitle);
+      font-weight: 700;
+      line-height: 21px;
+    }
+
+   &__navigation {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        padding-bottom: 8px;
+        
+        a {
+          font-size: var(--sii-sub-subtitle);
+          font-weight: 400;
+          line-height: 21px;
+          color: var(--sii-blanco);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .divider {
+    position: relative;
+    &::after {
+        background-color: #fff;
+        width: 1px;
+        height: 100%;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 32px;
+        /* left: 0; */
+        top: 0;
+        opacity: 50%;
+    }    
+}
+
+}

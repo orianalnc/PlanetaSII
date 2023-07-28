@@ -1,0 +1,54 @@
+
+
+@import 'base/variables';
+@import 'base/header';
+@import 'base/footer';
+@import 'base/main';
+@import 'base/responsive';
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/aos/dist/aos';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+
+
+
+body, *{
+   font-family: 'Montserrat', sans-serif; 
+}
+
+a {
+   &.btn {
+     padding: 12px 24px 12px 24px;
+     border-radius: 100px;
+     background-color: var(--sii-rojo);
+     color: var(--sii-blanco);
+     font-size: var(--sii-subtitle);
+     line-height: 24px;
+     &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="white"/><path d="M8.63306 11.2373L11.8704 7.99988L8.63306 4.76001" stroke="%23E9500D" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8705 7.99988H4.1272" stroke="%23E9500D" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+    &:hover {
+      opacity: 0.92;
+      background-color: var(--sii-rojo);
+      color: var(--sii-blanco);
+    }
+   }
+
+ }
